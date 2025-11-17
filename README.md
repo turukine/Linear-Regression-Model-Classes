@@ -1,106 +1,51 @@
-Project Goal
-Master supervised learning with linear models, regularization techniques, and quality metrics for regression problems.
+# Машинное обучение: линейные модели и регуляризация
 
-Core Concepts
-Regression Problems
-Predicting continuous values using linear relationships:
+## Описание проекта
+Проект по освоению методов обучения с учителем, включая линейные модели, техники регуляризации и метрики качества для задач регрессии.
 
-Linear Regression: $f(x) = \mathbf{w}^T \mathbf{x} + b$
+## Основные концепции
 
-Loss Function: Mean Squared Error (MSE)
+### Задачи регрессии
+Прогнозирование непрерывных значений с использованием линейных зависимостей:
 
-Optimization: Gradient Descent
+**Линейная регрессия**: 
+f(x) = wᵀx + b
 
-Key Challenges
-Overfitting: Model learns noise instead of patterns
+**Функция потерь**: Mean Squared Error (MSE)
 
-Underfitting: Model fails to capture data patterns
+**Оптимизация**: Градиентный спуск
 
-Bias-Variance Tradeoff: Balancing model complexity
+### Ключевые проблемы
+**Переобучение (Overfitting)**: Модель изучает шум вместо паттернов
 
-Regularization Techniques
-Ridge Regression (L2): $R(\theta) = |\theta|_2^2$
+**Недообучение (Underfitting)**: Модель не захватывает паттерны данных
 
-Lasso Regression (L1): $R(\theta) = |\theta|_1$
+**Компромисс смещения-дисперсии (Bias-Variance Tradeoff)**: Балансировка сложности модели
 
-Elastic Net: Combines L1 and L2 regularization
+### Техники регуляризации
+**Ridge регрессия (L2)**: R(θ) = ||θ||₂²
 
-Quality Metrics
-MAE (Mean Absolute Error)
+**Lasso регрессия (L1)**: R(θ) = ||θ||₁
 
-RMSE (Root Mean Square Error)
+**Elastic Net**: Комбинация L1 и L2 регуляризации
 
-R² (R-squared coefficient)
+### Метрики качества
+- MAE (Mean Absolute Error) - Средняя абсолютная ошибка
+- RMSE (Root Mean Square Error) - Среднеквадратичная ошибка
+- R² (R-squared coefficient) - Коэффициент детерминации
+- MAPE (Mean Absolute Percentage Error) - Средняя абсолютная процентная ошибка
 
-MAPE (Mean Absolute Percentage Error)
+## 🎯 Выполненные практические задачи
 
-Practical Tasks
-1. Theoretical Questions
-Derive analytical solution for linear regression
+### Теоретические вопросы
+- Выведено аналитическое решение для линейной регрессии
+- Объяснены эффекты L1/L2 регуляризации
+- Описан отбор признаков с помощью L1
+- Решены задачи с нелинейными зависимостями
 
-Explain L1/L2 regularization effects
-
-Describe feature selection with L1
-
-Handle nonlinear dependencies
-
-2. Data Preparation
-python
+### Подготовка данных
+```python
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression, Ridge, Lasso, ElasticNet
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
-Steps:
-
-Load and preprocess rental listing data
-
-Process "Features" column into binary indicators
-
-Create feature set with 22 dimensions
-
-3. Model Implementation
-Custom implementations:
-
-Linear Regression with SGD
-
-Ridge Regression
-
-Lasso Regression
-
-Elastic Net
-
-Compare with sklearn implementations
-
-4. Feature Engineering
-Implement MinMaxScaler and StandardScaler
-
-Train models with normalized features
-
-Create polynomial features (degree 10)
-
-5. Model Evaluation
-Calculate MAE, RMSE, R² metrics
-
-Compare custom vs sklearn implementations
-
-Identify best performing model
-
-Analyze model stability
-
-6. Advanced Techniques
-Target variable transformation (log scaling)
-
-Outlier handling
-
-Batch/mini-batch training
-
-Analytical solution implementation
-
-Key Deliverables
-Jupyter Notebook with all implementations
-
-Comparison tables for model metrics
-
-Analysis of regularization effects
-
-Identification of optimal model configuration
